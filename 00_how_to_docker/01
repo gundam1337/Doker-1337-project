@@ -4,3 +4,7 @@ docker-machine create --driver virtualbox Char
 
 docker-machine create --driver virtualbox --virtualbox-hostonly-cidr "192.168.56.1/24" Char
 
+//docker-machine is old so I used the multipass
+
+multipass launch --name Char
+multipass shell Char
