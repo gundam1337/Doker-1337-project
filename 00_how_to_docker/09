@@ -1,0 +1,20 @@
+docker pull debian
+
+docker run -it --name debian_dev debian
+
+# Update package lists and upgrade existing packages
+apt-get update
+apt-get upgrade -y
+
+# Install essential tools for compiling C code
+apt-get install -y build-essential
+
+# Install Git
+apt-get install -y git
+
+# Optional: Install additional useful tools
+apt-get install -y vim nano
+
+# Clean up to reduce container size
+apt-get clean
+rm -rf /var/lib/apt/lists/*

@@ -1,20 +1,20 @@
-On the Char VM (Docker host):
+//On the Char VM (Docker host):
 
 sudo mkdir -p /etc/systemd/system/docker.service.d
 sudo nano /etc/systemd/system/docker.service.d/override.conf
-In the opened file, we added:
+//In the opened file, we added:
 
 [Service]
 ExecStart=
 ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375
 
-Then, we reloaded and restarted the Docker service:
+//Then, we reloaded and restarted the Docker service:
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 
-We verified the Docker status and port listening:
+//We verified the Docker status and port listening:
 sudo systemctl status docker
 sudo netstat -tuln | grep :2375
 
-On the Gundam machine (client), we tested the connection:
+//On the Gundam machine (client), we tested the connection:
 curl -v http://10.68.246.148:2375/version
