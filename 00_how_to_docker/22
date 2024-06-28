@@ -1,0 +1,14 @@
+# in the Char vm we run this command 
+
+sudo docker swarm join-token worker
+
+# copy the output of the command 
+
+sudo docker swarm join --token SWMTKN-1-2wq2k0rcllmz44t9hlppu2nw0j06p4iuknb2jhufn7obwxkso3-ebkl6ldkxnrxnc40r40cpckss 10.68.246.158:2377
+
+# run in it  the Aiur vm 
+
+# To verify, go back to Char ,run this command : 
+
+sudo docker node ls
+

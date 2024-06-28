@@ -1,0 +1,9 @@
+# <your_user> : user
+# <your_password> : password
+
+sudo docker service create \
+  --name orbital-command \
+  --network overmind \
+  -e RABBITMQ_DEFAULT_USER=<your_user> \
+  -e RABBITMQ_DEFAULT_PASS=<your_password> \
+  rabbitmq:3-management

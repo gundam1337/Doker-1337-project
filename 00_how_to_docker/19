@@ -1,0 +1,24 @@
+#Now, let's create the container with the correct home directory mapping:
+
+docker run -d --name Abathur -v /home/ubuntu:/home/ubuntu -p 3000:3000 python:2-slim
+
+docker ps
+
+docker exec Abathur pip install Flask
+
+
+echo 'from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "<h1>Hello World</h1>"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=3000)' > /home/ubuntu/app.py
+
+#Run the Flask application:
+docker exec -d Abathur python /home/ubuntu/app.py
+
+#test 
+curl http://VM_IP:3000
