@@ -1,0 +1,15 @@
+Dockerfile basics: Understanding the syntax and structure of Dockerfiles.
+Docker images: How to create and use base images.
+Docker layers: Understanding how Docker builds images in layers and how to optimize them.
+Docker commands: Familiarize yourself with common Dockerfile instructions like FROM, RUN, COPY, ADD, EXPOSE, CMD, etc.
+Alpine and Debian images: Understanding the differences and use cases for these common base images.
+Package managers: How to use package managers within Dockerfiles (e.g., apt for Debian).
+Application deployment: How to containerize different types of applications (e.g., TeamSpeak server, Ruby on Rails apps).
+Multi-stage builds: Understanding how to use multiple stages in a Dockerfile for more efficient builds.
+Networking in Docker: How to expose and map ports.
+Docker best practices: Learning about Dockerfile best practices for creating efficient and secure containers.
+Docker Compose: Basic understanding of how to use Docker Compose for multi-container applications.
+Ruby on Rails: Basic knowledge of Rails application structure and deployment.
+GitLab: Understanding GitLab's architecture and deployment requirements.
+Docker volumes: How to persist data outside of containers.
+Environment variables: How to set and use environment variables in Dockerfiles.
