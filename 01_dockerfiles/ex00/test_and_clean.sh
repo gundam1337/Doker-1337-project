@@ -10,7 +10,7 @@ docker run -it --rm test-vim-image
 docker rmi test-vim-image
 
 # Remove the Dockerfile
-rm Dockerfile
+#rm Dockerfile
 
 # Clean up build cache
 docker builder prune -f
